@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Upload Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            padding: 50px 20px;
+        }
+        .admin-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1e293b;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .admin-container h2 {
+            margin-bottom: 30px;
+            color: #3b82f6;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: #0f172a;
+            color: white;
+            font-family: inherit;
+        }
+        .form-group input[type="file"] {
+            padding: 10px;
+        }
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        .form-row .form-group {
+            flex: 1;
+        }
+        .submit-btn {
+            background: #eab308;
+            color: #0f172a;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background: #ca8a04;
+        }
+        #message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+        .success {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            border: 1px solid #10b981;
+        }
+        .error {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 1px solid #ef4444;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="admin-container">
+        <h2>Upload New Project</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">Project Title *</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <input type="text" id="category" name="category" placeholder="e.g. Web App, Mobile App">
+                </div>
+                <div class="form-group">
+                    <label for="role">Your Role</label>
+                    <input type="text" id="role" name="role" placeholder="e.g. Fullstack Developer">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="short_description">Short Description (For Card) *</label>
+                <textarea id="short_description" name="short_description" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="full_description">Full Description</label>
+                <textarea id="full_description" name="full_description" rows="6"></textarea>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="start_date">Start Date</label>
+                    <input type="date" id="start_date" name="start_date">
+                </div>
+                <div class="form-group">
+                    <label for="end_date">End Date</label>
+                    <input type="date" id="end_date" name="end_date">
+                </div>
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" name="status">
+                        <option value="Completed">Completed</option>
+                        <option value="In Progress">In Progress</option>
+                    </select>
+                </div>
+                <!-- <div class="form-group">
+                    <label for="framework">Framework/Tools</label>
+                    <multiselect id="framework" name="framework">
+                        <option value="React">React</option>
+                        <option value="Vue.js">Vue.js</option>
+                        <option value="Angular">Angular</option>
+                    </multiselect>
+                </div> -->
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="github_url">GitHub URL</label>
+                    <input type="url" id="github_url" name="github_url">
+                </div>
+                <div class="form-group">
+                    <label for="demo_url">Demo/Live URL</label>
+                    <input type="url" id="demo_url" name="demo_url">
+                </div>
+                <div class="form-group">
+                    <label for="documentation_url">Doc URL</label>
+                    <input type="url" id="documentation_url" name="documentation_url">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="cover_image">Cover Image *</label>
+                <input type="file" id="cover_image" name="cover_image" accept="image/*" required>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">Upload Project</button>
+            <div id="message"></div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const btn = document.getElementById('submitBtn');
+            const msg = document.getElementById('message');
+            
+            btn.disabled = true;
+            btn.textContent = 'Uploading...';
+            msg.style.display = 'none';
+
+            try {
+                const formData = new FormData(form);
+                
+                // Auto generate slug from title
+                const title = formData.get('title');
+                const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+                formData.append('slug', slug);
+
+                const response = await fetch('/api/projects', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if(response.ok) {
+                    msg.textContent = 'Project successfully uploaded!';
+                    msg.className = 'success';
+                    msg.style.display = 'block';
+                    form.reset();
+                } else {
+                    msg.textContent = 'Error: ' + (result.message || 'Failed to upload');
+                    msg.className = 'error';
+                    msg.style.display = 'block';
+                }
+            } catch (err) {
+                msg.textContent = 'Network error or Server is not running.';
+                msg.className = 'error';
+                msg.style.display = 'block';
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Upload Project';
+            }
+        });
+    </script>
+</body>
+</html>

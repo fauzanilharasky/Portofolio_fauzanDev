@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <style>
+        /* Small helper to ensure the dashboard fills viewport */
+        .admin-app{min-height:100vh;width:100%;display:flex;background:linear-gradient(180deg,#f8f9fc 0%, #eff0f1 100%);}
+    </style>
+</head>
+<body>
+    <div class="admin-app">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-top">
+                <div class="brand">Admin</div>
+                <button class="toggle-btn" id="toggleBtn" aria-label="Toggle sidebar">☰</button>
+            </div>
+            <div class="profile">
+                <img src="../assets/images/users/default.png" alt="Admin" class="avatar" onerror="this.style.display='none'"/>
+                <div class="profile-info">
+                    <div class="name">Administrator</div>
+                    <div class="role">Superuser</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <a class="nav-link active" href="#">Dashboard</a>
+                <a class="nav-link" href="#">Projects</a>
+                <a class="nav-link" href="#">Users</a>
+                <a class="nav-link" href="#">Settings</a>
+                <a class="nav-link danger" href="#">Logout</a>
+            </nav>
+            <div class="sidebar-footer">v1.0 · Portofolio</div>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <h1 class="page-title">Dashboard</h1>
+                <div class="top-actions">
+                    <input class="search" placeholder="Search..." aria-label="Search" />
+                    <button class="btn">New</button>
+                </div>
+            </header>
+
+            <section class="content">
+                <div class="grid">
+                    <div class="card stat">
+                        <h3>Projects</h3>
+                        <p class="big">12</p>
+                    </div>
+                    <div class="card stat">
+                        <h3>Users</h3>
+                        <p class="big">128</p>
+                    </div>
+                    <div class="card stat">
+                        <h3>Active</h3>
+                        <p class="big">9</p>
+                    </div>
+                </div>
+
+                <div class="card large">
+                    <h2>Recent Activity</h2>
+                    <p class="note">No recent activity. This is a placeholder area for admin activity feed or quick stats.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../assets/js/admin.js"></script>
+</body>
+</html>

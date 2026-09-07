@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Admin Login</title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<link rel="stylesheet" href="../assets/css/admin.css" />
+	</head>
+	<body>
+		<main class="card" role="main">
+			<h1>Login to Admin</h1>
+			<form id="loginForm" action="/admin/login" method="post">
+				<div>
+					<label for="email">Email</label>
+					<input id="email" name="email" type="text" placeholder="name@example.com" required />
+				</div>
+				<div>
+					<label for="password">Password</label>
+					<input id="password" name="password" type="password" placeholder="••••••••" required />
+				</div>
+				<div class="actions">
+					<button type="submit">Login</button>
+					<button type="button" class="forgot" id="forgotBtn">Lupa?</button>
+				</div>
+				<p class="note">Masuk menggunakan akun admin Anda.</p>
+			</form>
+		</main>
+
+		<script>
+			// Demo: prevent actual submit and show a message
+			const form = document.getElementById('loginForm');
+			form.addEventListener('submit', (e) => {
+				e.preventDefault();
+				const email = form.email.value.trim();
+				if (!email) return alert('Masukkan email');
+				// TODO: ganti dengan pengiriman ke backend jika tersedia
+				alert('Login berhasil (demo) — ' + email);
+			});
+
+			document.getElementById('forgotBtn').addEventListener('click', () => {
+				alert('Fitur lupa kata sandi belum diaktifkan.');
+			});
+		</script>
+	</body>
+</html>
