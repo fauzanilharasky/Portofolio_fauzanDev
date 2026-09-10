@@ -1,0 +1,103 @@
+@import url('/assets/css/style.css');
+
+/* Next.js compatibility for links rendered without the legacy list wrapper. */
+.nav-links > a {
+    font-size: 1rem;
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-links > a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: var(--transition);
+}
+
+.nav-links > a:hover::after {
+    width: 100%;
+}
+
+/* The old admin stylesheet is kept as a public asset, while this wrapper
+   keeps the admin form consistent with its dark portfolio shell. */
+.admin {
+    min-height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.admin form {
+    max-width: 860px;
+    margin-top: 30px;
+    padding: 32px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+}
+
+.admin label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: .9rem;
+    margin-bottom: 18px;
+}
+
+.admin input,
+.admin textarea,
+.admin select {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+    padding: 13px 15px;
+    color: var(--text-primary);
+    background: rgba(15, 23, 42, .8);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    font: inherit;
+}
+
+.admin input:focus,
+.admin textarea:focus,
+.admin select:focus {
+    outline: 2px solid var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.admin-intro,
+.form-message,
+.back-link {
+    color: var(--text-secondary);
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.back-link:hover {
+    color: var(--accent-color);
+}
+
+.form-row {
+    display: flex;
+    gap: 18px;
+}
+
+.form-row > * {
+    flex: 1;
+}
+
+.form-message {
+    margin-top: 18px;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        display: block;
+    }
+}

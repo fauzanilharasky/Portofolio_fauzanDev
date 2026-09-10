@@ -43,12 +43,14 @@ export class ProjectsController {
     }),
   )
   create(@Body() body: any, @UploadedFile() file: Express.Multer.File) {
-    if (!file) {
-      throw new BadRequestException('Cover image is required');
+    if (!file && !body.cover_image) {
+      throw new BadRequestException('Cover image URL or file is required');
     }
 
     // file.filename contains the saved file name. We store the relative path in the DB
-    const coverImagePath = `assets/images/projects/${file.filename}`;
+    const coverImagePath = file
+      ? `assets/images/projects/${file.filename}`
+      : body.cover_image;
 
     const projectData = {
       ...body,

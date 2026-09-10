@@ -3,17 +3,12 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ServeStaticModule } from '@nestjs/serve-static';
-import { join } from 'path';
 import { ProjectsModule } from './projects/projects.module';
 import { UsersModule } from './users/users.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true, // Make env variables globally available
-    }),
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public'), // Serve files from /public
     }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],

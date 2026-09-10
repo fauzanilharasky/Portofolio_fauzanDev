@@ -1,19 +1,9 @@
-import { Controller, Get, Res } from '@nestjs/common';
-import type { Response } from 'express';
-import { join } from 'path';
-import { AppService } from './app.service';
+import { Controller, Get } from '@nestjs/common';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
-
   @Get()
-  getHello(@Res() res?: Response): string | void {
-    if (res) {
-      res.sendFile(join(process.cwd(), 'public', 'index.html'));
-      return;
-    }
-
-    return this.appService.getHello();
+  getHealth() {
+    return { status: 'ok', service: 'portfolio-api' };
   }
 }
