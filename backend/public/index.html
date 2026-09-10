@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fauzan Ilharasky - Modern Portfolio</title>
+    <title>Fauzan Ilharasky - Potfolio</title>
     <meta name="description" content="Portfolio of Fauzan Ilharasky, a Software Engineering Technology student with expertise in Fullstack Web & Mobile Development.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,46 +29,53 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero border-bottom-orange">
         <div class="hero-content">
             <div class="hero-text reveal-left">
-                <p class="greeting">Hi there, I'm</p>
-                <h1>Fauzan Ilharasky</h1>
-                <h2 class="typing-text">Fullstack Developer & <span class="highlight">Software Engineer</span></h2>
+                <p class="greeting"><span class="line"></span> HELLO, I'M</p>
+                <h1 class="highlight-orange" style="text-transform: uppercase;">Fauzan Ilharasky</h1>
+                <h2>Full-Stack Developer <span class="highlight-orange">|</span></h2>
                 <p class="summary">
-                    I build accessible, inclusive products and digital experiences for the web. Highly enthusiastic about application development, UI/UX, and contributing to the IT industry.
+                    I build exceptional digital experiences with modern technologies. Passionate about clean code, scalable solutions, and turning ideas into reality.
                 </p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">Hire Me <i class="fas fa-paper-plane"></i></a>
-                    <a href="#experience" class="btn btn-secondary">View Work <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-primary-orange">HIRE ME <i class="fas fa-arrow-right"></i></a>
+                    <a href="#experience" class="btn btn-outline">VIEW MY WORK <i class="fas fa-plus-square icon-blue"></i></a>
+                </div>
+                <div class="availability">
+                    <span class="dot"></span> AVAILABLE FOR FREELANCE
+                </div>
+                <div class="working-availability">
+                    <span class="dot"></span> AVAILABLE FOR WORKING
                 </div>
                 <div class="social-links">
-                    <a href="emailto:fzn.ilhrsky@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://linkedin.com/in/fauzan-ilharasky-3209902a2" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://github.com/fauzanilhrasky" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-
+                    <a href="https://linkedin.com/in/fauzan-ilharasky-3209902a2" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="hero-image reveal-right">
-                <div class="img-wrapper">
-                    <img src="assets/images/profile.png" alt="Fauzan Ilharasky">
-                    <div class="floating-badge badge-1">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <div class="floating-badge badge-2">
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <div class="floating-badge badge-3">
-                        <i class="fab fa-laravel"></i>
-                    </div>
-                    <div class="floating-badge badge-4">
-                        <i class="fab fa-php"></i>
-                    </div>
+                <div class="glowing-circle">
+                    <img src="assets/images/hero_profil.png" alt="Fauzan Ilharasky" class="profile-img">
+                </div>
+                <div class="floating-tech tech-react">
+                    <i class="fab fa-react"></i> React.js
+                </div>
+                <div class="floating-tech tech-node">
+                    <i class="fab fa-node-js"></i> Node.js
+                </div>
+                <div class="floating-tech tech-ts">
+                    <span class="ts-icon">TS</span> TypeScript
+                </div>
+                <div class="floating-tech tech-mongo">
+                    <i class="fas fa-database"></i> PostgreSQL
                 </div>
             </div>
         </div>
@@ -76,9 +83,6 @@
 
     <!-- About Section -->
     <section id="about" class="about section-padding" style="position: relative;">
-        <!-- Decorative Background Elements -->
-        <div class="bg-circle bg-circle-1"></div>
-        <div class="bg-circle bg-circle-2"></div>
         
         <div class="about-container">
             <div class="about-image-column pop-up">
@@ -89,7 +93,7 @@
             
             <div class="about-text-column pop-up" style="transition-delay: 0.3s;">
                 <div class="about-badge">ABOUT ME</div>
-                <h2 class="about-headline">I AM AVAILABLE FOR <span class="highlight">FULLSTACK WEB</span> PROJECTS</h2>
+                <h3 class="about-headline">I AM AVAILABLE FOR <span class="highlight">FULL-STACK WEB</span> PROJECTS</h3>
                 <p class="about-desc">
                     I am a graduate of <strong>Batam State Polytechnic</strong> with a strong interest and consistent dedication to the field of software engineering technology. I possess skills 
                     in full-stack development and user interface (UI) design, alongside a strong drive to continuously learn, grow, and contribute to the IT industry.
@@ -112,7 +116,7 @@
                 
                 <a href="#contact" class="btn btn-primary about-btn">GET IN TOUCH <i class="fas fa-arrow-right"></i></a>
                 
-                <div class="contact-info" style="margin-top: 40px; justify-content: flex-start;">
+                <!-- <div class="contact-info" style="margin-top: 40px; justify-content: flex-start;">
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
                         <span>fzn.ilhrsky@gmail.com</span>
@@ -125,13 +129,13 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <span>Batam City</span>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills section-padding bg-alt">
+    <section id="skills" class="skills section-padding">
         <div class="section-header reveal-up">
             <h2>Expertise & <span class="highlight">Competence</span></h2>
             <div class="underline"></div>
@@ -192,10 +196,10 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects section-padding">
+    <section id="projects" class="projects section-padding bg-grey">
         <div class="projects-header-wrapper reveal-up">
             <div class="projects-header-left">
-                <span class="sub-title"><span class="dash"></span> My Portfolio</span>
+                <span class="sub-title"><span class="dash"></span> <h4>My Portfolio</h4></span>
                 <h2>My Latest <span class="highlight-yellow">Projects</span></h2>
             </div>
             <div class="projects-header-right">
@@ -274,7 +278,7 @@
 
     
     <!-- Education Section -->
-    <section id="education" class="education section-padding bg-alt">
+    <section id="education" class="education section-padding bg-grey">
         <div class="section-header reveal-up">
             <h2>Education & <span class="highlight">Certifications</span></h2>
             <div class="underline"></div>
@@ -309,7 +313,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="footer">
+    <footer id="contact" class="footer bg-black">
         <div class="footer-content reveal-up">
             <h2>Ready to build something amazing?</h2>
             <p>Let's connect and discuss your next project.</p>
