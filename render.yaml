@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: portfolio-backend
+    runtime: node
+    region: singapore
+    plan: free
+    rootDir: backend
+    buildCommand: npm run build
+    startCommand: npm run start:prod
+    healthCheckPath: /
+    envVars:
+      - key: FRONTEND_URL
+        value: https://portfolio-fauzandev-5b4e.vercel.app
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: "5432"
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        sync: false

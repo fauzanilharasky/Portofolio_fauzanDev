@@ -16,7 +16,7 @@ export type Project = {
 };
 
 const apiUrl = (
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000"
+  process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"
 ).replace(/\/$/, "");
 
 export async function getProjects(): Promise<Project[]> {
