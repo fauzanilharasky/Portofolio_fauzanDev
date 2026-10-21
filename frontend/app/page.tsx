@@ -12,6 +12,12 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section id="home" className="hero border-bottom-orange">
+        <div className="hero-orbits" aria-hidden="true">
+          <span className="hero-orbit-ring hero-orbit-ring-outer" />
+          <span className="hero-orbit-ring hero-orbit-ring-middle" />
+          <span className="hero-orbit-ring hero-orbit-ring-inner" />
+          <span className="hero-orbit-ring hero-orbit-ring-dashed" />
+        </div>
         <div className="hero-content shell">
           <div className="hero-text">
             <p className="greeting"><span className="line" /> Hello, i&apos;m</p>
@@ -24,7 +30,7 @@ export default function HomePage() {
                 </svg>
               </span>
             </h1>
-            <h2>Full-Stack Developer <span className="highlight-orange">|</span></h2>
+            <h2><span className="hero-title-gradient">Full-Stack Developer</span> <span className="highlight-orange">|</span></h2>
             <p className="summary">
               I build exceptional digital experiences with modern technologies. Passionate about clean code, scalable solutions, and turning ideas into reality.
             </p>
@@ -35,7 +41,7 @@ export default function HomePage() {
                   <path d="M5 12h14M13 5l7 7-7 7" />
                 </svg>
               </a>
-              <a href="#projects" className="btn btn-outline">VIEW MY WORK <span className="icon-blue">+</span></a>
+              <a href="/project" className="btn btn-outline">VIEW MY WORK <span className="icon-blue">+</span></a>
             </div>
             <div className="availability"><span className="dot" /> AVAILABLE FOR FREELANCE</div>
             <div className="working-availability"><span className="dot" /> AVAILABLE FOR WORKING</div>
@@ -50,10 +56,10 @@ export default function HomePage() {
             </div>
           </div>
           <div className="hero-image"><div className="glowing-circle"><img src="/assets/images/hero_profil.png" alt="Fauzan Ilharasky" className="profile-img" /></div>
-            <div className="floating-tech tech-react">React.js</div>
-            <div className="floating-tech tech-node">Node.js</div>
-            <div className="floating-tech tech-ts">TypeScript</div>
-            <div className="floating-tech tech-mongo">PostgreSQL</div>
+            <div className="floating-tech tech-react"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="" aria-hidden="true" />React.js</div>
+            <div className="floating-tech tech-node"><img src="https://cdn.simpleicons.org/nodedotjs/83CD29" alt="" aria-hidden="true" />Node.js</div>
+            <div className="floating-tech tech-ts"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="" aria-hidden="true" />TypeScript</div>
+            <div className="floating-tech tech-mongo"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" aria-hidden="true" />PostgreSQL</div>
           </div>
         </div>
       </section>

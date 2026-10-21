@@ -170,7 +170,7 @@ export default function AboutMePage() {
 						<span className="edu-date">Jun 2022 - Aug 2026</span>
 						<h3>Batam State Polytechnic</h3>
 						<h4>Studi Program : Informatics Engineering - Software Engineering Technology</h4>
-						<p><strong>IPK:</strong> 3.80 / 4.00</p>
+						<p><strong>IPK / GPA :</strong> 3.80 / 4.00</p>
 						<p>Achievements : Object Oriented Programming, AI, IOT, Web Development, Databases, and Software Testing.</p>
 					</div>
 					<div className="edu-card glass">

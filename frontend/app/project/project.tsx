@@ -49,7 +49,7 @@ export default function ProjectsPage() {
                     ))}
                   </ul>
                   <Link href="/#contact" className="project-link-btn">
-                    Discuss Project
+                    ExploreProject
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M5 12h14M13 5l7 7-7 7" />
                     </svg>

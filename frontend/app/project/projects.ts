@@ -20,7 +20,7 @@ export const portfolioProjects: PortfolioProject[] = [
     technologies: [
       { name: "React", icon: "react/61DAFB" },
       { name: "TypeScript", icon: "typescript/3178C6" },
-      { name: "Next.js", icon: "nextdotjs/111827" },
+      { name: "Next.js", icon: "nextdotjs/ffff" },
     ],
   },
   {
@@ -32,7 +32,8 @@ export const portfolioProjects: PortfolioProject[] = [
     coverImage: "/assets/images/portfolio.png",
     previewLabel: "Personal Portfolio",
     technologies: [
-      { name: "Next.js", icon: "nextdotjs/111827" },
+      { name: "JavaScript", icon: "javascript/F7DF1E" },
+      { name: "Next.js", icon: "nextdotjs/ffff" },
       { name: "React", icon: "react/61DAFB" },
       { name: "TypeScript", icon: "typescript/3178C6" },
       { name: "PostgreSQL", icon: "postgresql/4169E1" },
@@ -51,6 +52,7 @@ export const portfolioProjects: PortfolioProject[] = [
       { name: "Laravel", icon: "laravel/FF2D20" },
       { name: "Tailwind CSS", icon: "tailwindcss/06B6D4" },
       { name: "JavaScript", icon: "javascript/F7DF1E" },
+      { name: "MySQL", icon: "mysql/4479A1" },
     ],
   },
   {
@@ -68,23 +70,38 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
   },
   {
-    title: "Incubator Business Landing Page",
-    category: "Landing Page",
-    role: "Web Design Concept",
+    title: "Top Websites: Web development service profile",
+    category: "Custom Website",
+    role: "Web Development Service Profile",
     description:
-      "A clean landing page concept highlighting business services, key benefits, and a clear call to action.",
-    coverImage: null,
+      "A profile website concept for a web development service, showcasing the services offered and previous projects.",
+    coverImage: "/assets/images/projects/topweb.png",
     previewLabel: "Business Landing Page",
     technologies: [
-      { name: "HTML5", icon: "html5/E34F26" },
-      { name: "CSS3", icon: "css3/1572B6" },
+      { name: "Next.js", icon: "nextdotjs/ffff" },
+      { name: "Tailwind CSS", icon: "tailwindcss/06B6D4" },
       { name: "JavaScript", icon: "javascript/F7DF1E" },
     ],
   },
   {
-    title: "Analytics Dashboard Concept",
-    category: "Dashboard UI",
-    role: "Frontend Concept",
+    title: "Onicars: Car Rental Service Application",
+    category: "Custom Mobile Application",
+    role: "Mobile Development",
+    description:
+      "A mobile application concept for a car rental service, allowing users to browse available vehicles, book rentals, and manage their reservations.",
+    coverImage: "/assets/images/projects/onicars.png",
+    previewLabel: "Car Rental Application",
+    technologies: [
+      { name: "Flutter", icon: "flutter/02569B" },
+      { name: "Dart", icon: "dart/0175C2" },
+      { name: "Firebase", icon: "firebase/FFCA28" },
+      { name: "Google Cloud", icon: "googlecloud/4285F4" },
+    ],
+  },
+  {
+    title: "Inforsys: Analytics Dashboard",
+    category: "Custom Web Application",
+    role: "Frontend Development",
     description:
       "A dashboard concept focused on readable metrics, structured information, and a responsive interface.",
     coverImage: null,
