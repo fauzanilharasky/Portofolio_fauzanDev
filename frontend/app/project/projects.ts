@@ -14,13 +14,14 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "Notary Office Website",
     role: "Frontend Development",
     description:
-      "A professional corporate website concept presenting notary services with clear navigation and a responsive layout.",
+      "professional corporate website concept presenting notary services with clear navigation and a responsive layout.",
     coverImage: "/assets/images/projects/Notaris.png",
     previewLabel: "Corporate Website",
     technologies: [
       { name: "React", icon: "react/61DAFB" },
       { name: "TypeScript", icon: "typescript/3178C6" },
       { name: "Next.js", icon: "nextdotjs/ffff" },
+      { name: "Tailwind CSS", icon: "tailwindcss/06B6D4" },
     ],
   },
   {
@@ -28,7 +29,7 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "Custom Mobile App",
     role: "Mobile Development",
     description:
-      "A mobile application concept for a car rental service, allowing users to browse available vehicles, book rentals, and manage their reservations.",
+      "mobile application concept for a car rental service, allowing users to browse available vehicles, book rentals, and manage their reservations.",
     coverImage: "/assets/images/projects/onicars.png",
     previewLabel: "Car Rental Application",
     technologies: [
@@ -43,7 +44,7 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "E-Learning Website",
     role: "Web Development",
     description:
-      "A landing page concept that presents an incubator program and helps visitors explore its services.",
+      "landing page concept that presents an incubator program and helps visitors explore its services.",
     coverImage: "/assets/images/projects/learning.png",
     previewLabel: "E-Learning Website",
     technologies: [
@@ -57,9 +58,9 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     title: "Mechanical Completion: on-site construction project monitoring",
     category: "Management System",
-    role: "Web Development",
+    role: "Full-stack Development",
     description:
-      "A concept for managing completion records and making project information easier to review.",
+      "website concept for managing completion records, as well as facilitating the monitoring of information and the processes of ongoing projects.",
     coverImage: "/assets/images/projects/mechanical.jpg",
     previewLabel: "Management System",
     technologies: [
@@ -76,7 +77,7 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "Custom Website",
     role: "Web Development Service",
     description:
-      "A profile website concept for a web development service, showcasing the services offered and previous projects.",
+      "profile website concept for a web development service, showcasing the services offered and previous projects.",
     coverImage: "/assets/images/projects/Topwebsite.png",
     previewLabel: "Business Landing Page",
     technologies: [
@@ -86,11 +87,26 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
   },
   {
+    title: "Inforsys: Software company profile",
+    category: "Custom Website",
+    role: "Frontend Development",
+    description:
+      "A website concept for showcasing a software company's profile, services, and portfolio.",
+    coverImage: "/assets/images/projects/inforsys.jpg",
+    previewLabel: "Company Profile",
+    technologies: [
+      { name: "JavaScript", icon: "javascript/F7DF1E" },
+      { name: "Angular", icon: "angular/E23237" },
+      { name: "Tailwind CSS", icon: "tailwindcss/06B6D4" },
+      { name: "CSS", icon: "css/1572B6" },
+    ],
+  },
+  {
     title: "Fauzan.dev: Personal Portfolio",
     category: "Portfolio Website",
     role: "Full-stack Development",
     description:
-      "A responsive portfolio website to introduce my work, experience, and services in one place.",
+      "responsive portfolio website to introduce my work, experience, and services in one place.",
     coverImage: "/assets/images/portfolio.png",
     previewLabel: "Personal Portfolio",
     technologies: [
@@ -99,20 +115,6 @@ export const portfolioProjects: PortfolioProject[] = [
       { name: "React", icon: "react/61DAFB" },
       { name: "TypeScript", icon: "typescript/3178C6" },
       { name: "PostgreSQL", icon: "postgresql/4169E1" },
-    ],
-  },
-  {
-    title: "Inforsys: Analytics Dashboard",
-    category: "Custom Web Application",
-    role: "Frontend Development",
-    description:
-      "A dashboard concept focused on readable metrics, structured information, and a responsive interface.",
-    coverImage: null,
-    previewLabel: "Analytics Dashboard",
-    technologies: [
-      { name: "React", icon: "react/61DAFB" },
-      { name: "TypeScript", icon: "typescript/3178C6" },
-      { name: "Firebase", icon: "firebase/FFCA28" },
     ],
   },
 ];
